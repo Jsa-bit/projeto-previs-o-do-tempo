@@ -33,7 +33,7 @@ body{
     padding: 11px;
     border-radius: 20px;
     font-size: 17px;
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(221, 221, 221);
     width: calc(100% - 70px);
     cursor: pointer;
     
@@ -43,7 +43,7 @@ body{
     outline: none;
     padding: 10px;
     border-radius: 50px;
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(221, 221, 221);
     cursor: pointer;
     float: right;
 }
@@ -74,6 +74,7 @@ body{
 .texto-previsão{
     margin-left: 18px;
     font-size: 17px;
+    text-transform: capitalize;
 }
 .umidade{
     margin-top: 20px;

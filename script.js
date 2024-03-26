@@ -2,12 +2,17 @@
 const key = "adf1cbf3cde84d5465635b0d1dd64e56"
 
 function colocarDadosNaTela(dados){
-    
+
+    document.querySelector(".título").innerHTML= "Tempo em " + dados.name
+    document.querySelector(".temp").innerHTML= Math.floor(dados.main.temp) + " ºC"
+    document.querySelector(".texto-previsão").innerHTML= dados.weather[0].description
+    document.querySelector(".umidade").innerHTML="Umidade:  " + dados.main.humidity + "%" 
+    document.querySelector(".img-previsão").src=`https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
 }
 
 
 async function buscarCidade(cidade){
-    const dados= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${key}&lang=pt_br`).then(resposta => resposta.json())
+    const dados= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${key}&lang=pt_br&units=metric`).then(resposta => resposta.json())
     
     colocarDadosNaTela(dados)
  }
