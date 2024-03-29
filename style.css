@@ -19,7 +19,7 @@ body{
     padding: 20px;
     color: rgb(255, 255, 255);
     width: 95%;
-    max-width: 750px;
+    max-width: 550px;
 }
 .caixa-menor{
     display: flex;
